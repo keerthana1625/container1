@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Seat Booking</title>
+    <link rel="stylesheet" href="book.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div class="col-xl-9 col-lg-9 col-md-9 col-sm-9">
+        <nav class="navigation navbar navbar-expand-md navbar-dark ">
+           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample04" aria-controls="navbarsExample04" aria-expanded="false" aria-label="Toggle navigation">
+           <span class="navbar-toggler-icon"></span>
+           </button>
+           <div class="collapse navbar-collapse" id="navbarsExample04" style="display: inline;">
+              <ul class="navbar-nav mr-auto" style="margin-left: 700px;float: right;">
+                 <li class="nav-item" >
+                    <a class="nav-link" href="index.html" >Home</a>
+                 </li>
+                 <li class="nav-item">
+                    <a class="nav-link" href="index.html#nowshowing" >Now Showing</a>
+                 </li>
+                 <li class="nav-item">
+                    <a class="nav-link" href="book.html" >Book Tickets</a>
+                 </li>
+              </ul>
+        </nav>
+     </div>
+     
+    <div class="movie-container">
+        <label style="font-size: 20px;color: rgb(0, 0, 0);">Choose a Movie:</label>
+        <select id="movie" style="background-color: #e6e6e6;">
+            <option value="">choose a movie...</option>
+            <option value="150">Movie 1</option>
+            <option value="250">Movie 2</option>
+            <option value="120">Movie 3</option>
+            <option value="750">Movie 4</option>
+        </select><br><br>
+        <label style="font-size: 20px;color: rgb(0, 0, 0);">Time Remaining for the next show: </label>
+        <span id="timer" style="font-size: 20px;"></span>
+    </div>
+    <ul class="showcase">
+        <li>
+            <div class="seat"></div>
+            <small>N/A</small>
+        </li>
+        <li>
+            <div class="seat selected"></div>
+            <small>Selected</small>
+        </li>
+        <li>
+            <div class="seat occupied"></div>
+            <small>Occupied</small>
+        </li>
+    </ul>
+
+    <div class="container">
+        <div class="movie-screen">
+            <h2 style="color:black">Screen</h2>
+        </div>
+        <div class="row-container" style="margin-top: -30px;">
+            <div class="row">
+                <div class="seat"></div>
+                <div class="seat"></div>
+                <div class="seat"></div>
+                <div class="seat"></div>
+                <div class="seat"></div>
+                <div class="seat"></div>
+                <div class="seat"></div>
+                <div class="seat"></div>
+            </div>
+            <div class="row">
+                <div class="seat"></div>
+                <div class="seat"></div>
+                <div class="seat"></div>
+                <div class="seat occupied"></div>
+                <div class="seat occupied"></div>
+                <div class="seat"></div>
+                <div class="seat"></div>
+                <div class="seat"></div>
+            </div>
+            <div class="row">
+                <div class="seat"></div>
+                <div class="seat"></div>
+                <div class="seat"></div>
+                <div class="seat"></div>
+                <div class="seat"></div>
+                <div class="seat"></div>
+                <div class="seat occupied"></div>
+                <div class="seat occupied"></div>
+            </div>
+            <div class="row">
+                <div class="seat"></div>
+                <div class="seat"></div>
+                <div class="seat"></div>
+                <div class="seat"></div>
+                <div class="seat"></div>
+                <div class="seat"></div>
+                <div class="seat"></div>
+                <div class="seat"></div>
+            </div>
+            <div class="row">
+                <div class="seat"></div>
+                <div class="seat"></div>
+                <div class="seat"></div>
+                <div class="seat occupied"></div>
+                <div class="seat occupied"></div>
+                <div class="seat"></div>
+                <div class="seat"></div>
+                <div class="seat"></div>
+            </div>
+            <div class="row">
+                <div class="seat"></div>
+                <div class="seat"></div>
+                <div class="seat"></div>
+                <div class="seat"></div>
+                <div class="seat"></div>
+                <div class="seat"></div>
+                <div class="seat"></div>
+                <div class="seat"></div>
+            </div>
+            <div class="row">
+                <div class="seat"></div>
+                <div class="seat"></div>
+                <div class="seat"></div>
+                <div class="seat"></div>
+                <div class="seat occupied"></div>
+                <div class="seat occupied"></div>
+                <div class="seat occupied"></div>
+                <div class="seat"></div>
+            </div>
+           
+        </div>
+        
+
+    </div>
+
+
+    <div class="text-wrapper">
+        <p class="text">Selected Seats <span id='count'>0</span>
+            <p class="text">Total Price ₹<span id="total">0</span></p>
+    </div><br>
+    <button class="book" type="submit" onclick="return validatebooking();">Book Now</button><hr><br>
+    <script src='book.js'></script>
+</body>
+
+</html>
